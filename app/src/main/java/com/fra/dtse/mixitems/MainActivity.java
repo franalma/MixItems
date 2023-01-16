@@ -3,10 +3,14 @@ package com.fra.dtse.mixitems;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
+import com.fra.dtse.mixitems.ui.EnvironmentFragment;
+import com.fra.dtse.mixitems.ui.FaqFragment;
+import com.fra.dtse.mixitems.ui.IssuesWarningFragment;
 import com.fra.dtse.mixitems.ui.expand.ExpandListAdapter;
 import com.fra.dtse.mixitems.ui.expand.ExpandListValues;
 
@@ -20,30 +24,31 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        init();
     }
 
-    private void init(){
-        ExpandableListView expandableListView;
-        ExpandableListAdapter expandableListAdapter;
-        List<String> expandableListTitle;
-        HashMap<String, List<String>> expandableListDetail;
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 
-        expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
-        expandableListDetail = ExpandListValues.getData(getBaseContext());
-        expandableListTitle = new ArrayList<>(expandableListDetail.keySet());
-        expandableListAdapter = new ExpandListAdapter(this, expandableListTitle, expandableListDetail);
-        expandableListView.setAdapter(expandableListAdapter);
-//        expandableListView.setOnGroupExpandListener(groupPosition -> Toast.makeText(getApplicationContext(),
-//                expandableListTitle.get(groupPosition) + " List Expanded.",
-//                Toast.LENGTH_SHORT).show());
+    public void showIssuesFragment(View view){
+        getSupportFragmentManager().beginTransaction().replace(R.id.id_container,
+                new IssuesWarningFragment()).addToBackStack("").commit();
+    }
 
+    public void showFaqHelp(View view){
+        getSupportFragmentManager().beginTransaction().replace(R.id.id_container,
+                new FaqFragment()).addToBackStack("").commit();
+    }
 
-//        expandableListView.setOnGroupCollapseListener(groupPosition -> Toast.makeText(getApplicationContext(),
-//                expandableListTitle.get(groupPosition) + " List Collapsed.",
-//                Toast.LENGTH_SHORT).show());
-//
+    public void showEnv(View view){
+        getSupportFragmentManager().beginTransaction().replace(R.id.id_container,
+                new EnvironmentFragment()).addToBackStack("").commit();
+    }
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        getSupportFragmentManager().popBackStack();
     }
 }

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="10dp"
+           android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+            <LinearLayout android:id="@+id/id_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="120dp"
+                    android:background="@color/purple_200"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginStart="5dp"
+                        >
+
+                        <TextView android:id="@+id/id_row1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Row1"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="5dp"
+                            android:textSize="20sp"/>
+
+                        <TextView android:id="@+id/id_row2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Row2"
+                            android:layout_marginBottom="5dp"
+                            android:textSize="15sp"/>
+
+                        <TextView android:id="@+id/id_row3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Row3"
+                            android:layout_marginBottom="5dp"
+                            android:textSize="15sp"/>
+
+                        <TextView android:id="@+id/id_row4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Row4"
+                            android:layout_marginBottom="5dp"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@color/purple_200"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="80dp"/>
+
+
+                </RelativeLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</layout>
