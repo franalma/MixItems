@@ -1,0 +1,25 @@
+[
+  {
+    "q": "¿Qué encontraré en el apartado de soporte técnico?",
+    "a": ""
+  },
+  {
+    "q": "¿Cómo puedo realizar un autodiagnóstico del terminal?",
+    "a": ""
+  },
+  {
+    "q": "¿Cómo puedo avisar de una avería?",
+    "a": "* Accede a la seccióln del menú principal \"Aviso de avería\". \n Identifica el motivo de la avería. \n Envía el aviso con el motivo de la avería  al servicio de soporte para que puedan solucionarle la incidencia lo antes posible. \n También puedes solicitar una llamada pulsando sobre la opción \"Quiero que me llamen\". \n Si al realizar un Autotest, se detecta alguna anomalía, podrás informar directamente a soporte para su resolución"
+  },
+  {
+    "q": "¿Cómo puedo solicitar consumibles?",
+    "a": ""
+  },
+  {
+    "q": "¿Cómo se calcula el ahorro de papel?",
+    "a": ""
+  }
+]
+
+
+
